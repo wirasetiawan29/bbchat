@@ -1,0 +1,71 @@
+syntax="proto3";
+
+package grpc;
+service ChatService{
+    rpc Register(RegisterRequest) returns (RegisterResponse);
+    rpc GetParticipants(GetParticipantsRequest) returns (GetParticipantsResponse);
+    rpc CreateRoom(CreateRoomRequest) returns (CreateRoomResponse);
+    rpc SaveDeviceToken(SaveDeviceTokenRequest) returns (SaveDeviceTokenResponse);
+    rpc SendMessage(SendMessageRequest) returns (SendMessageResponse);
+    rpc GenerateToken(GenerateTokenRequest) returns (GenerateTokenResponse);
+}
+
+message RegisterResponse{
+    string state_message = 1;
+}
+
+message RegisterRequest {
+    string user_id = 1;
+    string tinode_id = 2;
+    string full_name = 3;
+}
+
+message GetParticipantsRequest {
+    string order_id = 1;
+}
+
+message GetParticipantsResponse{
+    string call_room_id = 1;
+    string chat_room_id = 2;
+    string full_name = 3;
+}
+
+message CreateRoomRequest{
+    string order_id = 1;
+    string customer_id = 2;
+    string driver_id = 3;
+}
+
+message CreateRoomResponse{
+    string state_message = 1;
+}
+
+message SaveDeviceTokenRequest {
+    string recipient_id = 1;
+    string client_id = 2;
+    string token = 3;
+    int32 platform = 4;
+    string notif_pipeline = 5;
+}
+
+message SaveDeviceTokenResponse {
+    string state_message = 1;
+}
+
+message SendMessageRequest{
+    string reference_id = 1;
+    string content = 2;
+}
+
+message SendMessageResponse{
+    string state_message = 1;
+}
+message GenerateTokenRequest{
+    string client_id = 1;
+    string client_secret = 2;
+}
+
+message GenerateTokenResponse{
+    string access_token = 1;
+    int64 expires_in = 2;
+}

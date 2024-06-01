@@ -1,0 +1,17 @@
+//
+// Development .xcconfig
+//
+
+// Include Pods config.
+//#include "Pods/Target Support Files/Pods-Tinodios/Pods-Tinodios.debug.xcconfig"
+
+// Server URL
+// HOST_NAME = 127.0.0.1:6060
+// HOST_NAME = 34.124.216.166:6060
+// HOST_NAME = sandbox.tinode.co:443
+HOST_NAME = oapi-tinode.bluebird.id:443
+// Use TLS (https, wss)
+USE_TLS = YES
+
+// App Settings
+APP_NAME = Tinode-sandbox

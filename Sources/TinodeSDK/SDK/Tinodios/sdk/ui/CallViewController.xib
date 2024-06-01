@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CallViewController" customModule="Tinodios" customModuleProvider="target">
+            <connections>
+                <outlet property="dialingAnimationContainer" destination="AIv-nO-Q28" id="g5p-QR-gNO"/>
+                <outlet property="hangUpButton" destination="G0x-s4-VcN" id="6GO-Qb-rxZ"/>
+                <outlet property="localView" destination="b0T-8a-dvu" id="gad-zG-KVv"/>
+                <outlet property="localViewHeightConstraint" destination="T1j-0z-Rv8" id="eP2-SA-K3m"/>
+                <outlet property="localViewWidthConstraint" destination="UZc-0l-aDv" id="Cjb-o8-MqS"/>
+                <outlet property="micToggleButton" destination="j3V-lp-bII" id="EYL-Fa-Rn2"/>
+                <outlet property="peerAvatarImageView" destination="N8k-zH-F8P" id="01D-VC-6u1"/>
+                <outlet property="peerNameLabel" destination="fu6-qo-lBX" id="eNb-K8-jVs"/>
+                <outlet property="peerNameRemoteVideoLabel" destination="i0q-N0-eRE" id="NWv-Iz-eTj"/>
+                <outlet property="remoteView" destination="VOK-Cf-uL4" id="XeY-qp-Jeu"/>
+                <outlet property="speakerToggleButton" destination="qxX-2S-DJ2" id="jJw-St-T4U"/>
+                <outlet property="videoToggleButton" destination="BwP-ig-TU4" id="8Zq-rZ-9K7"/>
+                <outlet property="view" destination="Xuj-qs-2S1" id="2ek-4b-9zO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Xuj-qs-2S1">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIv-nO-Q28" userLabel="Dialing Animation Container">
+                    <rect key="frame" x="132.66666666666666" y="156.66666666666666" width="127.99999999999997" height="127.99999999999997"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="AIv-nO-Q28" secondAttribute="height" multiplier="1:1" id="2Vg-5l-UhF"/>
+                        <constraint firstAttribute="width" constant="128" id="DN0-Z3-QCM"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice Hatter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu6-qo-lBX" customClass="PaddedLabel" customModule="Tinodios" customModuleProvider="target">
+                    <rect key="frame" x="126.33333333333333" y="115.00000000000001" width="140.66666666666669" height="33.666666666666671"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N8k-zH-F8P" userLabel="Avatar View" customClass="RoundImageView" customModule="Tinodios" customModuleProvider="target">
+                    <rect key="frame" x="132.66666666666666" y="156.66666666666666" width="127.99999999999997" height="127.99999999999997"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="Dm2-S1-cW7"/>
+                        <constraint firstAttribute="width" secondItem="N8k-zH-F8P" secondAttribute="height" multiplier="1:1" id="x6v-No-o0n"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="defaultType" value="p2p"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOK-Cf-uL4" userLabel="RemoteView">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0T-8a-dvu" userLabel="LocalView">
+                    <rect key="frame" x="241" y="594" width="144" height="144"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration" label="LocalView"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="144" id="T1j-0z-Rv8"/>
+                        <constraint firstAttribute="width" constant="144" id="UZc-0l-aDv"/>
+                    </constraints>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice Hatter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0q-N0-eRE" userLabel="Peer Name Remote Label" customClass="PaddedLabel" customModule="Tinodios" customModuleProvider="target">
+                    <rect key="frame" x="20.000000000000007" y="706" width="102.66666666666669" height="24"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="LS6-Q2-8TS" userLabel="Controls Stack">
+                    <rect key="frame" x="36.666666666666657" y="750" width="320" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxX-2S-DJ2" userLabel="Loudspeaker">
+                            <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="6IX-pc-SNa"/>
+                                <constraint firstAttribute="height" constant="56" id="G78-UE-9J1"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <imageReference key="image" image="speaker.wave.3.fill" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="large" weight="regular"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="28"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didToggleSpeaker:" destination="-1" eventType="touchUpInside" id="06q-X1-piY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3V-lp-bII" userLabel="Mute">
+                            <rect key="frame" x="88" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="Wod-1g-NMh"/>
+                                <constraint firstAttribute="height" constant="56" id="e03-0O-Sij"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <imageReference key="image" image="mic.fill" catalog="system" symbolScale="large"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="large" weight="regular"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="28"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didToggleMic:" destination="-1" eventType="touchUpInside" id="H7K-tT-4kV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwP-ig-TU4" userLabel="Video Off">
+                            <rect key="frame" x="176" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="YmY-S5-xnQ"/>
+                                <constraint firstAttribute="width" constant="56" id="bQ3-36-F0L"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            <inset key="imageEdgeInsets" minX="15" minY="14" maxX="15" maxY="20"/>
+                            <state key="normal" image="vc.fill">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default" weight="regular"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="28"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didToggleCamera:" destination="-1" eventType="touchUpInside" id="pNK-xw-h1V"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0x-s4-VcN" userLabel="End Call">
+                            <rect key="frame" x="264" y="0.0" width="56" height="56"/>
+                            <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="hZ1-m9-zz7"/>
+                                <constraint firstAttribute="width" constant="56" id="sfQ-0D-aeA"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="phone.down.fill" catalog="system">
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="large" weight="regular"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="28"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapHangUp:" destination="-1" eventType="touchUpInside" id="WyF-Nm-iyF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="Fwa-a5-giV"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="XQD-aN-VpE"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="N8k-zH-F8P" firstAttribute="top" secondItem="fu6-qo-lBX" secondAttribute="bottom" constant="8" id="0rI-mk-h6E"/>
+                <constraint firstItem="XQD-aN-VpE" firstAttribute="bottom" secondItem="LS6-Q2-8TS" secondAttribute="bottom" constant="12" id="9Ub-5U-o4i"/>
+                <constraint firstItem="LS6-Q2-8TS" firstAttribute="top" secondItem="b0T-8a-dvu" secondAttribute="bottom" constant="12" id="AmL-Gj-6cu"/>
+                <constraint firstItem="i0q-N0-eRE" firstAttribute="leading" secondItem="VOK-Cf-uL4" secondAttribute="leading" constant="20" id="D99-Rn-FIc"/>
+                <constraint firstItem="b0T-8a-dvu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i0q-N0-eRE" secondAttribute="trailing" symbolic="YES" id="EkC-pe-kOD"/>
+                <constraint firstItem="VOK-Cf-uL4" firstAttribute="leading" secondItem="XQD-aN-VpE" secondAttribute="leading" id="Ho2-4N-5fS"/>
+                <constraint firstItem="VOK-Cf-uL4" firstAttribute="top" secondItem="XQD-aN-VpE" secondAttribute="top" id="Nsw-yN-Meo"/>
+                <constraint firstItem="XQD-aN-VpE" firstAttribute="bottom" secondItem="VOK-Cf-uL4" secondAttribute="bottom" id="OZk-hV-1Q4"/>
+                <constraint firstItem="fu6-qo-lBX" firstAttribute="top" secondItem="XQD-aN-VpE" secondAttribute="top" constant="56" id="ezT-QF-azg"/>
+                <constraint firstItem="AIv-nO-Q28" firstAttribute="centerX" secondItem="N8k-zH-F8P" secondAttribute="centerX" id="ikn-rA-iP2"/>
+                <constraint firstItem="LS6-Q2-8TS" firstAttribute="centerX" secondItem="Xuj-qs-2S1" secondAttribute="centerX" id="kMB-Zs-wcR"/>
+                <constraint firstItem="AIv-nO-Q28" firstAttribute="centerY" secondItem="N8k-zH-F8P" secondAttribute="centerY" id="lCG-xm-GG0"/>
+                <constraint firstItem="XQD-aN-VpE" firstAttribute="trailing" secondItem="b0T-8a-dvu" secondAttribute="trailing" constant="8" id="oJi-bL-4BK"/>
+                <constraint firstItem="VOK-Cf-uL4" firstAttribute="trailing" secondItem="XQD-aN-VpE" secondAttribute="trailing" id="sOS-ab-HaE"/>
+                <constraint firstItem="i0q-N0-eRE" firstAttribute="bottom" secondItem="LS6-Q2-8TS" secondAttribute="top" constant="-20" id="t5M-5n-R45"/>
+                <constraint firstItem="N8k-zH-F8P" firstAttribute="centerX" secondItem="Xuj-qs-2S1" secondAttribute="centerX" id="tUn-vO-WCI"/>
+                <constraint firstItem="fu6-qo-lBX" firstAttribute="centerX" secondItem="Xuj-qs-2S1" secondAttribute="centerX" id="xM3-Wh-2De"/>
+            </constraints>
+            <point key="canvasLocation" x="-279" y="-32"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mic.fill" catalog="system" width="110" height="128"/>
+        <image name="phone.down.fill" catalog="system" width="128" height="55"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="84"/>
+        <image name="vc.fill" width="154" height="132"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
