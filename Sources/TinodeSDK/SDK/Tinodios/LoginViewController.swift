@@ -7,7 +7,7 @@
 
 import UIKit
 import os
-import SwiftKeychainWrapper
+//import SwiftKeychainWrapper
 import TinodeSDK
 //import TinodiosDB
 
